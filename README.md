@@ -4,7 +4,7 @@ node-redis
 For start project you <b>need</b>:
 <ol>
  <li>Clone project.</li>
- <li>Create .env file with this env variables: 
+ <li>Create .env file in root directory with this env variables: 
  <pre>PORT=4444
 
 REDIS_PORT=6379
