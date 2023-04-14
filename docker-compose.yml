@@ -1,0 +1,48 @@
+version: "3.3"
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:12
+    environment:
+      PG_DATA: /var/lib/postgresql/data
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: admin
+    volumes:
+      - films:/var/lib/postgresql/data
+      - ./src/scripts/restore.sh:/docker-entrypoint-initdb.d/restore.sh
+      - ./dvdrental.tar:/docker-entrypoint-initdb.d/dvdrental.tar
+    ports:
+      - 5416:5432
+    expose:
+      - 5416
+    restart: always
+  pgadmin:
+    container_name: pgadmin_container
+    image: dpage/pgadmin4
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: 'False'
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+    ports:
+      - 80:80
+    restart: unless-stopped
+  redis:
+      container_name: redis
+      image: redis
+      env_file:
+        - .env
+      command: /bin/sh -c "redis-server --requirepass $$REDIS_PASSWORD"
+      volumes:
+        - cache:/data
+      restart: always
+      ports:
+        - 6379:6379
+      expose:
+        - 6379
+volumes:
+  films:
+  pgadmin:
+  cache:

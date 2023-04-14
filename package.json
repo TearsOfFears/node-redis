@@ -1,0 +1,32 @@
+{
+  "name": "halo",
+  "version": "1.0.0",
+  "description": "test project",
+  "main": "app.js",
+  "scripts": {
+    "start": "app.js",
+    "start:dev": "nodemon app.js",
+    "mockData": ""
+  },
+  "keywords": [
+    "redis",
+    "docker",
+    "postresql"
+  ],
+  "author": "Nazar Demchan",
+  "license": "ISC",
+  "devDependencies": {
+    "express-winston": "^4.2.0",
+    "nodemon": "^2.0.22",
+    "pg": "^8.10.0",
+    "winston": "^3.8.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "node-cache": "^5.1.2",
+    "redis": "^4.6.5",
+    "sequelize": "^6.31.0"
+  }
+}
