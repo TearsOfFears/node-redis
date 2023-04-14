@@ -18,4 +18,5 @@ POSTGRES_PASSWORD=admin
 </pre>
  </li>
  <li>Run docker compose file with docker-compose up in root directory</li>
+ <li>Run npm run start:dev command</li>
 </ol>
