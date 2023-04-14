@@ -19,6 +19,3 @@ POSTGRES_PASSWORD=admin
  </li>
  <li>Run docker compose file with docker-compose up in root directory</li>
 </ol>
-
-
-3.
