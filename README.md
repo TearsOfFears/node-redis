@@ -4,7 +4,7 @@ node-redis
 For start project you <b>need</b>:
 <ol>
  <li>Clone project.</li>
- <li>Create <code>.env<code/> file in root directory with this env variables: </li>
+ <li>Create .env file in root directory with this env variables:</li>
  <pre>PORT=4444
 
 REDIS_PORT=6379
@@ -16,7 +16,6 @@ POSTGRES_HOST=localhost
 POSTGRES_USER=postgres
 POSTGRES_PASSWORD=admin
 </pre>
- </li>
  <li>Run docker compose file with <code>docker-compose up</code> in root directory</li>
  <li>Run <code>npm run start:dev</code> command</li>
 </ol>
