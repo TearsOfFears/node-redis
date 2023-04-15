@@ -17,6 +17,6 @@ POSTGRES_USER=postgres
 POSTGRES_PASSWORD=admin
 </pre>
  </li>
- <li>Run docker compose file with <span>docker-compose up</span> in root directory</li>
- <li>Run <span>npm run start:dev</span> command</li>
+ <li>Run docker compose file with <mark>docker-compose up</mark> in root directory</li>
+ <li>Run <mark>npm run start:dev</mark> command</li>
 </ol>
